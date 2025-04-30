@@ -1,0 +1,19 @@
+.markdown-reading-view .block-language-tikz svg {
+    overflow: hidden !important;
+}
+
+.markdown-reading-view .block-language-tikz clipPath {
+    overflow: hidden !important;
+    position: relative;
+}
+
+.markdown-reading-view .block-language-tikz g {
+    overflow: hidden !important;
+    position: relative;
+}
+
+.markdown-reading-view .block-language-tikz path {
+    overflow: hidden !important;
+    position: relative;
+}
+

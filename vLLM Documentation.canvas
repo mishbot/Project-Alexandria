@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"9612cecc2b16a481","type":"text","text":"**1. At LLM initialization:** You begin at LLM where you enter your LLM parameters. LLM is used as an abstraction barrier for LLMEngine. As such, in the LLM constructor, you immediately create an engine from the engine arguments  that were entered as parameters in the constructor (some of them are optional)  in LLMEngine.from_engine_args().","x":-155,"y":-105,"width":455,"height":205},
+		{"id":"e4a702aa3deeaaa2","type":"text","text":"**2. At .generate() call:** You go through some settings to check if the default parameters were called. You then split two-ways: you first execute a loop of _add_request, which adds each prompt to the engine requests, and then you return _run_engine.","x":-155,"y":260,"width":455,"height":164},
+		{"id":"23206c7aa20822f6","type":"text","text":"3a. At _add_request: You remove a layer of abstraction by adding a request_id to each prompt and send it to the LLMEngine.add_request to officially add it to the request.","x":-420,"y":680,"width":414,"height":120},
+		{"id":"fa89103f898c51a8","type":"text","text":"3b. At _ run_engine based on the TQDM preference the bar for prompts when generating is either there or not. Then, while there are unfinished requests (async process), the engine runs its LLMEngine.step() function.","x":180,"y":680,"width":460,"height":120},
+		{"id":"d204d32c4a919890","type":"text","text":"**At step():** scheduler_outputs is assigned to scheduler.schedule(). Then, depending on if scheduler_outputs is not empty, output is set to model_executor.execute_model().","x":180,"y":954,"width":460,"height":106},
+		{"id":"62ecc776cdf5ef81","type":"text","text":"Now this is where change needs to be made. Since model_executor is a LLMEngine instance variable of an executor that is not yet determined and therefore not instantiated, it has to be decided somewhere. It is actually decided using the executor_class instance variable, which is thereby decided in LLMEngine.from_engine_args(). There are three ways executor_class could be decided: If vLLM is ran on AWS Neuron, then executor_class = NeuronExecutor. If vLLM uses Ray (which is decided in EngineArgs.parallel_config), then initialize_ray_cluster() is executed and executor_class = RayGPUExecutor. Finally, if parallel_config.world_size is 1, executor_class = GPUExecutor. These classes are all children of an abstract ExecutorBase class, and all have the execute_model() function which returns output.","x":180,"y":1214,"width":460,"height":246},
+		{"id":"5e3d9e5f9d4721fd","type":"text","text":"**GPUExecutor returns** the function driver_worker.execute_model(). **Driver_worker** is a Worker instance variable initialized in the constructor. ","x":180,"y":1634,"width":460,"height":186}
+	],
+	"edges":[
+		{"id":"7e7d12655a69327b","fromNode":"9612cecc2b16a481","fromSide":"bottom","toNode":"e4a702aa3deeaaa2","toSide":"top"},
+		{"id":"ff06065c3ea6d978","fromNode":"e4a702aa3deeaaa2","fromSide":"bottom","toNode":"23206c7aa20822f6","toSide":"top"},
+		{"id":"3ecc10d95db0781c","fromNode":"e4a702aa3deeaaa2","fromSide":"bottom","toNode":"fa89103f898c51a8","toSide":"top"},
+		{"id":"1712c4b423e551ea","fromNode":"fa89103f898c51a8","fromSide":"bottom","toNode":"d204d32c4a919890","toSide":"top"},
+		{"id":"d6dc581ccdfba165","fromNode":"d204d32c4a919890","fromSide":"bottom","toNode":"62ecc776cdf5ef81","toSide":"top"},
+		{"id":"88db88b23659cee7","fromNode":"62ecc776cdf5ef81","fromSide":"bottom","toNode":"5e3d9e5f9d4721fd","toSide":"top"}
+	]
+}

@@ -1,0 +1,355 @@
+{
+  "main": {
+    "id": "0fa752ab21827df8",
+    "type": "split",
+    "children": [
+      {
+        "id": "cdcc191e46013a91",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb17839359dac0c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/1. Probability/6. Information Theory/6.1 Entropy.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "6.1 Entropy"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "130a5f708b49faeb",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "6acee0841fe706cc",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Files"
+        }
+      },
+      {
+        "id": "3c458d04add883e7",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Search"
+        }
+      },
+      {
+        "id": "b507afe180c209cc",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          },
+          "icon": "lucide-tags",
+          "title": "Tags"
+        }
+      },
+      {
+        "id": "e3c0b0b2ef35207b",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "Plugin no longer active"
+        }
+      },
+      {
+        "id": "1292f68bb55bf860",
+        "type": "leaf",
+        "state": {
+          "type": "mk-file-view",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "Plugin no longer active"
+        }
+      },
+      {
+        "id": "a7e9b41982be2da5",
+        "type": "leaf",
+        "state": {
+          "type": "mk-path-view",
+          "state": {},
+          "icon": "layout-grid",
+          "title": "Spaces"
+        }
+      }
+    ],
+    "currentTab": 5
+  },
+  "right": {
+    "id": "49e2f421e45a6435",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "b62ce2699da68951",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "lucide-file",
+          "title": "Plugin no longer active"
+        }
+      },
+      {
+        "id": "d7d521e2ffda5ea9",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Mathematics/1. Probability/2. Random Variables/2.6 Functions of Random Variables/2.6a Transformation Theorem.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
+        }
+      },
+      {
+        "id": "b85339cb14085313",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Mathematics/1. Probability/2. Random Variables/2.6 Functions of Random Variables/2.6a Transformation Theorem.md"
+          },
+          "icon": "lucide-list",
+          "title": "Outline"
+        }
+      },
+      {
+        "id": "4e910488d88a0fa5",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "56e6d44b6e78acff",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "281a185f3bed22f9",
+        "type": "leaf",
+        "state": {
+          "type": "reminder-list",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "Plugin no longer active"
+        }
+      },
+      {
+        "id": "3fcca046a0050814",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "894f077352dd4e9e",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "dacc8616ffd1ef1f",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "52dc32bbc21266c0",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "fcb4650ae986e455",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "cdc0df6e441ad390",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "0a006e4a5293f0e9",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "a9c9fcb850985464",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "7fef8cff2e613256",
+        "type": "leaf",
+        "state": {
+          "type": "graph-analysis",
+          "state": {},
+          "icon": "GA-ICON",
+          "title": "Graph Analysis"
+        }
+      },
+      {
+        "id": "34b26cebe7e2f68f",
+        "type": "leaf",
+        "state": {
+          "type": "graph-analysis",
+          "state": {},
+          "icon": "GA-ICON",
+          "title": "Graph Analysis"
+        }
+      },
+      {
+        "id": "e92e49cc5d5a7613",
+        "type": "leaf",
+        "state": {
+          "type": "graph-analysis",
+          "state": {},
+          "icon": "GA-ICON",
+          "title": "Graph Analysis"
+        }
+      }
+    ],
+    "currentTab": 5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "publish:Publish changes...": false,
+      "workspaces:Manage workspace layouts": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
+      "obsidian42-brat:BRAT": false
+    }
+  },
+  "active": "bb17839359dac0c1",
+  "lastOpenFiles": [
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5b Discrete Distributions/2.5b.1 Probability Mass Function.md",
+    "Mathematics/2. Linear Algebra/13. Singular-Value Decomposition/13.1 Singular Value Decomposition.md",
+    "Mathematics/2. Linear Algebra/4. Matrices/4.5 Rank.md",
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5c Continuous Distributions/2.5c.1 Probability Density Function.md",
+    "Mathematics/1. Probability/2. Random Variables/2.4 Conditional Random Variables.md",
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5b Discrete Distributions/2.5b.4 Binomial Distribution.md",
+    "Mathematics/8. Optimization Models/8.1 Linear Programs.md",
+    "Mathematics/8. Optimization Models/8. Optimization Models.md",
+    "Mathematics/8. Optimization Models",
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5b Discrete Distributions/2.5b.2 Discrete Uniform Distributon.md",
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5b Discrete Distributions/2.5b.5 Geometric Distribution.md",
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5b Discrete Distributions/2.5b.6 Hypergeometric Distribution.md",
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5b Discrete Distributions/2.5b.3 Bernoulli Distribution.md",
+    "Mathematics/1. Probability/6. Information Theory/6.3 Typical Sets.md",
+    "Mathematics/1. Probability/6. Information Theory/6.2 Mutual Information.md",
+    "Mathematics/1. Probability/6. Information Theory/6.1 Entropy.md",
+    "Untitled 2.canvas",
+    "Mathematics/1. Probability/2. Random Variables/2.6 Functions of Random Variables/2.6a Expectation.md",
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5c Continuous Distributions/2.5c.3 Gaussian Distribution.md",
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5d Derived Distributions.md",
+    "Mathematics/1. Probability/2. Random Variables/2.6 Functions of Random Variables/2.6e Moment Generating Functions.md",
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5a Probability Distribution.md",
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5c Continuous Distributions/2.5c.2 Exponential Distribution.md",
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5b Discrete Distributions/2.5b.3 Binomial Distribution.md",
+    "Computer Science/Computer Science.md",
+    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5c Continuous Distributions/Untitled.md",
+    "Untitled 1.canvas",
+    "Mathematics/1. Probability/2. Random Variables/2.6 Functions of Random Variables/2.6a Transformation Theorem.md",
+    "Untitled.canvas",
+    "Mathematics/2. Linear Algebra/9. Orthogonality & Orthonormality/2.9a Orthogonality.md",
+    "attachments/Screenshot 2024-11-30 at 23.44.39.png",
+    "attachments/Screenshot 2024-11-06 at 2.00.51.png",
+    "attachments/Screenshot 2024-11-30 at 23.39.42.png",
+    "attachments/Screenshot 2024-12-01 at 0.16.06.png",
+    "attachments/Screenshot 2024-08-04 at 16.59.23.png",
+    "attachments/Screenshot 2024-12-01 at 0.00.08.png",
+    "attachments/reference-card.svg",
+    "attachments/Internal Discrete-Time Stability.png",
+    "attachments/Continuous-Time Internal Stability.png",
+    "vLLM Documentation.canvas",
+    "STAT 20/Pasted image 20231120074516.png"
+  ]
+}
