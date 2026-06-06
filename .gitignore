@@ -1,0 +1,149 @@
+# Project Alexandria — .gitignore
+#
+# Controls what ships in the open-source release. The principle is simple:
+# the notes are the artifact, everything below is per-machine state, course
+# material, or OS junk that has no business in a public repository.
+#
+# What is intentionally NOT ignored, and why:
+#   - .obsidian/app.json, appearance.json, hotkeys.json, types.json,
+#     core-plugins.json, community-plugins.json — define the portable vault
+#     configuration so a stranger cloning the repo gets the same setup.
+#   - .obsidian/snippets/ and .obsidian/themes/ — user-authored CSS that
+#     belongs to the vault.
+#   - .obsidian/plugins/<plugin>/main.js, manifest.json, styles.css — the
+#     compiled plugin code (so cloners don't have to reinstall every plugin).
+#   - attachments/ — images and files referenced from notes.
+#   - CLAUDE.md, README.md — vault standards.
+#
+# Whitelist-style entries (the `!pattern` lines) live in the .obsidian
+# section. They re-allow specific files that the broad `.obsidian/*` rule
+# above would otherwise ignore.
+
+# ============================================================
+# Course materials (private)
+# ============================================================
+# Lecture slides, problem sets, textbook chapters, and other Berkeley course
+# artifacts that seed the notes but are not redistributed. See
+# _sources/README.md for the full provenance and copyright policy.
+_sources/
+
+# ============================================================
+# Obsidian per-machine state (whitelist approach)
+# ============================================================
+# Ignore everything in .obsidian/ by default, then re-allow the specific
+# files that define portable vault configuration. This protects against
+# future Obsidian releases adding new files that may contain machine-
+# specific paths or personal data.
+.obsidian/*
+!.obsidian/app.json
+!.obsidian/appearance.json
+!.obsidian/core-plugins.json
+!.obsidian/community-plugins.json
+!.obsidian/hotkeys.json
+!.obsidian/types.json
+!.obsidian/graph.json
+!.obsidian/snippets/
+!.obsidian/themes/
+!.obsidian/plugins/
+
+# Within plugins, ignore per-user data and caches but keep compiled code
+# (main.js, manifest.json, styles.css).
+.obsidian/plugins/*/data.json
+.obsidian/plugins/*/data-*.json
+.obsidian/plugins/*/.cache/
+
+# Workspace files contain window layouts and recently-opened paths.
+# Listed explicitly because some Obsidian versions write variants the
+# whitelist would otherwise let through.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace.json.bak
+
+# ============================================================
+# MakeMD per-machine state
+# ============================================================
+# View definitions, filter caches, and per-folder frontmatter overrides.
+# These pollute the graph view (see Vault Note-by-Note Analysis §III) and
+# don't survive cleanly across machines.
+.makemd/
+.space/
+**/.space/
+
+# ============================================================
+# Obsidian trash
+# ============================================================
+# .trash/ is temporary by policy (README §6); never ship it publicly. Git
+# history is the long-term record, not .trash.
+.trash/
+
+# ============================================================
+# Scratch and working state
+# ============================================================
+_scratch/
+
+# ============================================================
+# macOS
+# ============================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+.fseventsd
+.fuse_hidden*
+.VolumeIcon.icns
+Icon
+Icon?
+._*
+
+# ============================================================
+# Windows
+# ============================================================
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ============================================================
+# Linux
+# ============================================================
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================
+# Editors and IDEs
+# ============================================================
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.iml
+*.swp
+*.swo
+*.swn
+*~
+.netrwhist
+.project
+.settings/
+
+# ============================================================
+# Office and LibreOffice lock and temp files
+# ============================================================
+# These appear when a .docx is open in Word or LibreOffice and prevent
+# concurrent edits. They have no business in version control.
+~$*
+.~lock.*#
+
+# ============================================================
+# Generic temp / backup / log files
+# ============================================================
+*.tmp
+*.temp
+*.log
+*.bak
+*.orig
+*.rej
+.obsidian/

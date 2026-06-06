@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/1. Probability/6. Information Theory/6.1 Entropy.md",
+                "file": "Mathematics/2. Probability/6. Statistical Inference/6.2 Classical Estimation/6.2a MLE.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "6.1 Entropy"
+              "title": "6.2a MLE"
             }
           }
         ]
@@ -79,8 +79,8 @@
         "state": {
           "type": "bookmarks",
           "state": {},
-          "icon": "lucide-file",
-          "title": "Plugin no longer active"
+          "icon": "lucide-ghost",
+          "title": "bookmarks"
         }
       },
       {
@@ -89,8 +89,8 @@
         "state": {
           "type": "mk-file-view",
           "state": {},
-          "icon": "lucide-file",
-          "title": "Plugin no longer active"
+          "icon": "lucide-ghost",
+          "title": "mk-file-view"
         }
       },
       {
@@ -124,8 +124,8 @@
             "backlinkCollapsed": false,
             "unlinkedCollapsed": true
           },
-          "icon": "lucide-file",
-          "title": "Plugin no longer active"
+          "icon": "lucide-ghost",
+          "title": "backlink"
         }
       },
       {
@@ -180,8 +180,8 @@
         "state": {
           "type": "reminder-list",
           "state": {},
-          "icon": "lucide-file",
-          "title": "Plugin no longer active"
+          "icon": "lucide-ghost",
+          "title": "reminder-list"
         }
       },
       {
@@ -268,14 +268,54 @@
         "id": "7fef8cff2e613256",
         "type": "leaf",
         "state": {
-          "type": "graph-analysis",
+          "type": "empty",
           "state": {},
-          "icon": "GA-ICON",
-          "title": "Graph Analysis"
+          "icon": "lucide-file",
+          "title": "New tab"
         }
       },
       {
         "id": "34b26cebe7e2f68f",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "e92e49cc5d5a7613",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "10a8e3b1d23c6cf9",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "39d5aa0385630457",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {},
+          "icon": "lucide-file",
+          "title": "New tab"
+        }
+      },
+      {
+        "id": "259c0d7fce898121",
         "type": "leaf",
         "state": {
           "type": "graph-analysis",
@@ -285,7 +325,17 @@
         }
       },
       {
-        "id": "e92e49cc5d5a7613",
+        "id": "75110f0fcc7340a3",
+        "type": "leaf",
+        "state": {
+          "type": "graph-analysis",
+          "state": {},
+          "icon": "GA-ICON",
+          "title": "Graph Analysis"
+        }
+      },
+      {
+        "id": "83c6f0d29f69d66e",
         "type": "leaf",
         "state": {
           "type": "graph-analysis",
@@ -299,6 +349,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
+      "copilot:Open Copilot Chat": false,
       "publish:Publish changes...": false,
       "workspaces:Manage workspace layouts": false,
       "switcher:Open quick switcher": false,
@@ -310,6 +362,13 @@
   },
   "active": "bb17839359dac0c1",
   "lastOpenFiles": [
+    "Mathematics/2. Probability/2. Random Variables/2.2 Probability Distributions/2.6c Continuous Distributions/2.2c.5 Gaussian Distribution.md",
+    "Mathematics/2. Probability/1. Laws of Probability/1.6 Bayes' Rule.md",
+    "Mathematics/9. Mathematical Optimization/2. Convex Analysis/2.3 Convex Conjugates.md",
+    "Mathematics/9. Mathematical Optimization/3. Conic Optimization/3. Conic Optimization.md",
+    "Mathematics/9. Mathematical Optimization/4. Duality/4.2 Fenchel Duality.md",
+    "Mathematics/9. Mathematical Optimization/4. Duality/4.1 Duality.md",
+    "Mathematics/9. Mathematical Optimization/9. Mathematical Optimization.md",
     "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5b Discrete Distributions/2.5b.1 Probability Mass Function.md",
     "Mathematics/2. Linear Algebra/13. Singular-Value Decomposition/13.1 Singular Value Decomposition.md",
     "Mathematics/2. Linear Algebra/4. Matrices/4.5 Rank.md",
@@ -331,15 +390,8 @@
     "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5c Continuous Distributions/2.5c.3 Gaussian Distribution.md",
     "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5d Derived Distributions.md",
     "Mathematics/1. Probability/2. Random Variables/2.6 Functions of Random Variables/2.6e Moment Generating Functions.md",
-    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5a Probability Distribution.md",
-    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5c Continuous Distributions/2.5c.2 Exponential Distribution.md",
-    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5b Discrete Distributions/2.5b.3 Binomial Distribution.md",
-    "Computer Science/Computer Science.md",
-    "Mathematics/1. Probability/2. Random Variables/2.5 Probability Distributions/2.5c Continuous Distributions/Untitled.md",
     "Untitled 1.canvas",
-    "Mathematics/1. Probability/2. Random Variables/2.6 Functions of Random Variables/2.6a Transformation Theorem.md",
     "Untitled.canvas",
-    "Mathematics/2. Linear Algebra/9. Orthogonality & Orthonormality/2.9a Orthogonality.md",
     "attachments/Screenshot 2024-11-30 at 23.44.39.png",
     "attachments/Screenshot 2024-11-06 at 2.00.51.png",
     "attachments/Screenshot 2024-11-30 at 23.39.42.png",

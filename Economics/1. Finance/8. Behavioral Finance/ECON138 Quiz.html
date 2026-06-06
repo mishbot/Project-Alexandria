@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECON 138 Quiz — Lectures 11–19</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\\\(',right:'\\\\)',display:false},{left:'\\\\[',right:'\\\\]',display:true}],throwOnError:false});"></script>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0a0c;
+    --bg-gradient: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(124,158,255,0.08), transparent 70%);
+    --surface: #121216;
+    --surface-hover: #181820;
+    --surface-2: #1a1a21;
+    --border: #23232c;
+    --border-hover: #3a3a46;
+    --fg: #ededf0;
+    --fg-muted: #8a8a94;
+    --fg-dim: #5a5a64;
+    --accent: #7c9eff;
+    --accent-hover: #9ab3ff;
+    --accent-dim: rgba(124,158,255,0.12);
+    --accent-glow: rgba(124,158,255,0.25);
+    --ok: #4ade80;
+    --ok-dim: rgba(74,222,128,0.1);
+    --bad: #f87171;
+    --bad-dim: rgba(248,113,113,0.1);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--bg); }
+  body {
+    font-family: "Inter", -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    font-feature-settings: "cv02","cv03","cv04","cv11","ss01";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--bg);
+    background-image: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--fg);
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem 4rem;
+    line-height: 1.6;
+    font-size: 15px;
+    min-height: 100vh;
+  }
+  h1 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+    margin: 0 0 0.4rem;
+    background: linear-gradient(180deg, #ffffff 0%, #b8b8c4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h1 + p {
+    color: var(--fg-muted);
+    margin: 0 0 1.8rem;
+    font-size: 0.92rem;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.85rem 1.9rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-md);
+    animation: fadeIn 0.35s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  label {
+    display: block;
+    margin: 1.2rem 0 0.45rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--fg-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  input[type=password], input[type=text], select, textarea {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.94rem;
+    font-family: inherit;
+    background: var(--surface-2);
+    color: var(--fg);
+    transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  }
+  input::placeholder, textarea::placeholder { color: var(--fg-dim); }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: var(--surface-hover);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+  }
+  textarea {
+    resize: vertical;
+    min-height: 6rem;
+    font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+  select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path fill='none' stroke='%238a8a94' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M2.5 4.5l3.5 3.5 3.5-3.5'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    padding-right: 2.2rem;
+  }
+  button {
+    background: var(--accent);
+    color: #0a0a0c;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1.4rem;
+    font-family: inherit;
+    transition: background 0.15s ease, transform 0.08s ease, box-shadow 0.15s ease;
+    letter-spacing: -0.005em;
+    box-shadow: 0 0 0 0 var(--accent-glow);
+  }
+  button:hover:not(:disabled) {
+    background: var(--accent-hover);
+    box-shadow: 0 0 0 4px var(--accent-dim);
+  }
+  button:active:not(:disabled) { transform: translateY(1px); }
+  button:disabled {
+    background: var(--surface-2);
+    color: var(--fg-dim);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  button.secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--border);
+    box-shadow: none;
+  }
+  button.secondary:hover:not(:disabled) {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+  }
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    gap: 1rem;
+  }
+  #score {
+    font-weight: 600;
+    color: var(--fg);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    flex-shrink: 0;
+    padding: 0.3rem 0.65rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+  }
+  #meta {
+    font-style: normal;
+    color: var(--fg-muted);
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .question-text {
+    font-size: 1.06rem;
+    line-height: 1.65;
+    margin-bottom: 1.35rem;
+    color: var(--fg);
+  }
+  .choices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin: 1rem 0;
+  }
+  .choice {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.9rem 1.05rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    background: var(--surface-2);
+    transition: all 0.15s ease;
+  }
+  .choice:hover {
+    border-color: var(--border-hover);
+    background: var(--surface-hover);
+  }
+  .choice:has(input:checked) {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+  .choice input[type=radio] {
+    accent-color: var(--accent);
+    margin-top: 0.28rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+  }
+  .verdict {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 1.1rem 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  .verdict.ok { color: var(--ok); }
+  .verdict.bad { color: var(--bad); }
+  .feedback {
+    margin: 0.8rem 0;
+    color: var(--fg);
+    line-height: 1.65;
+  }
+  .correct-line {
+    margin: 0.55rem 0;
+    font-size: 0.94rem;
+    color: var(--fg-muted);
+  }
+  .correct-line b { color: var(--accent); font-weight: 600; }
+  details { margin-top: 1rem; }
+  details summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    user-select: none;
+    list-style: none;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::before {
+    content: "▸";
+    display: inline-block;
+    margin-right: 0.45rem;
+    transition: transform 0.15s ease;
+    font-size: 0.8rem;
+  }
+  details[open] summary::before { transform: rotate(90deg); }
+  details summary:hover { color: var(--accent-hover); }
+  details .model-answer {
+    margin-top: 0.7rem;
+    padding: 1.05rem 1.2rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-sm);
+    white-space: pre-wrap;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--fg);
+  }
+  .err {
+    color: var(--bad);
+    padding: 0.9rem 1.1rem;
+    border: 1px solid rgba(248,113,113,0.3);
+    border-radius: var(--radius-sm);
+    background: var(--bad-dim);
+    font-size: 0.9rem;
+  }
+  .spinner {
+    color: var(--fg-muted);
+    font-style: normal;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .spinner::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .hint {
+    font-size: 0.8rem;
+    color: var(--fg-dim);
+    margin-top: 0.5rem;
+    line-height: 1.55;
+  }
+  .hint a { color: var(--fg-muted); }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  a:hover { color: var(--accent-hover); text-decoration: underline; }
+  #controls {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 1.3rem;
+    flex-wrap: wrap;
+  }
+  #controls button { margin-top: 0; }
+  #quitBtn {
+    margin-left: auto;
+    float: none !important;
+    font-size: 0.82rem;
+    padding: 0.55rem 1rem;
+    color: var(--fg-muted);
+    border-color: var(--border);
+  }
+  #quitBtn:hover:not(:disabled) {
+    background: var(--surface-2);
+    color: var(--bad);
+    border-color: rgba(248,113,113,0.3);
+  }
+  /* KaTeX dark-mode tweaks */
+  .katex { color: var(--fg); font-size: 1.02em; }
+  .katex .base { color: var(--fg); }
+  /* Selection */
+  ::selection {
+    background: var(--accent-dim);
+    color: var(--fg);
+  }
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 5px; border: 2px solid var(--bg); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--border-hover); }
+</style>
+</head>
+<body>
+
+<div id="setup" class="card">
+  <h1>ECON 138 — Behavioral Finance Quiz</h1>
+  <p>Lectures 11–19. Questions generated and graded by Claude.</p>
+
+  <label for="apiKey">Anthropic API key</label>
+  <input type="password" id="apiKey" placeholder="sk-ant-...">
+  <div class="hint">Kept in memory only. Not stored or transmitted anywhere except api.anthropic.com. Get one at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a>.</div>
+
+  <label for="model">Model</label>
+  <select id="model">
+    <option value="claude-sonnet-4-6">claude-sonnet-4-6 (recommended, fast)</option>
+    <option value="claude-opus-4-6">claude-opus-4-6 (highest quality, slower)</option>
+    <option value="claude-haiku-4-5-20251001">claude-haiku-4-5 (cheapest, fastest)</option>
+  </select>
+
+  <label for="qtype">Question type</label>
+  <select id="qtype">
+    <option value="mixed">Mixed (MCQ / short answer / quantitative)</option>
+    <option value="mcq">Multiple choice only</option>
+    <option value="short">Short answer only</option>
+    <option value="quant">Quantitative only</option>
+  </select>
+
+  <label for="lecture">Lecture filter</label>
+  <select id="lecture">
+    <option value="any">Any (Lectures 11–19)</option>
+    <option value="11">Lecture 11 — Momentum</option>
+    <option value="12">Lecture 12 — Investor Psychology I (Belief Biases)</option>
+    <option value="13">Lecture 13 — Investor Psychology II (Extrapolation)</option>
+    <option value="14">Lecture 14 — Reaction Models (BSV, Hong-Stein)</option>
+    <option value="15">Lecture 15 — Bubbles &amp; Limits to Arbitrage</option>
+    <option value="16">Lecture 16 — Household Finance</option>
+    <option value="17">Lecture 17 — Prospect Theory I</option>
+    <option value="18">Lecture 18 — Prospect Theory Applications</option>
+    <option value="19">Lecture 19 — Hyperbolic Discounting</option>
+  </select>
+
+  <button id="startBtn">Start quiz</button>
+  <div id="setupErr" class="err" style="display:none; margin-top:1em"></div>
+</div>
+
+<div id="quiz" class="card" style="display:none">
+  <div class="topbar">
+    <div id="meta">—</div>
+    <div id="score">0 / 0</div>
+  </div>
+  <div id="questionBox"></div>
+  <div id="controls">
+    <button id="submitBtn">Submit answer</button>
+    <button id="nextBtn" class="secondary" style="display:none">Next question →</button>
+    <button id="quitBtn" class="secondary">End session</button>
+  </div>
+  <div id="gradeBox"></div>
+</div>
+
+<script>
+// ============================================================
+// ECON 138 Quiz Applet
+// Questions and grading powered by the Anthropic Messages API
+// ============================================================
+
+const TOPICS = {
+  11: {
+    title: "Momentum",
+    topics: [
+      "cross-sectional momentum (Jegadeesh-Titman 1993)",
+      "time-series momentum (Moskowitz-Ooi-Pedersen 2012)",
+      "52-week-high momentum (George-Hwang 2004)",
+      "industry momentum",
+      "volatility-scaled momentum / momentum crashes (Daniel-Moskowitz 2016)",
+      "post-formation long-run reversal (DeBondt-Thaler 1985)",
+      "relationship of momentum to CAPM and Fama-French factors",
+    ],
+  },
+  12: {
+    title: "Investor Psychology I — Belief Biases",
+    topics: [
+      "conservatism (under-weighting of new signals, c<1 in Rabin template)",
+      "representativeness heuristic and the law of small numbers",
+      "base-rate neglect (d<1 in Rabin template)",
+      "gambler's fallacy vs hot-hand fallacy",
+      "overreaction (c>1) and confirmation bias (d>1)",
+      "Rabin (1998) parametric Bayes distortion, four corners of (c,d)",
+      "anchoring and insufficient adjustment (Tversky-Kahneman 1974)",
+      "availability heuristic",
+    ],
+  },
+  13: {
+    title: "Investor Psychology II — Extrapolation",
+    topics: [
+      "extrapolative beliefs (Greenwood-Shleifer 2014 survey evidence)",
+      "X-CAPM (Barberis-Greenwood-Jin-Shleifer 2015)",
+      "earnings extrapolation (Bordalo-Gennaioli-La Porta-Shleifer 2020)",
+      "experience effects (Malmendier-Nagel 2011, 2016)",
+      "Coibion-Gorodnichenko forecast-revision regression",
+      "how extrapolation generates excess volatility, predictability, and momentum in one mechanism",
+    ],
+  },
+  14: {
+    title: "Reaction Models — BSV and Hong-Stein",
+    topics: [
+      "Barberis-Shleifer-Vishny (1998) Markov-switching between Regime 1 (trending) and Regime 2 (mean-reverting)",
+      "BSV conservatism + representativeness → under- then over-reaction",
+      "Hong-Stein (1999) newswatchers vs. momentum traders",
+      "gradual information diffusion and the momentum / reversal pattern",
+      "how reaction models match the empirical momentum–reversal joint pattern",
+    ],
+  },
+  15: {
+    title: "Bubbles and Limits to Arbitrage",
+    topics: [
+      "limits to arbitrage (Shleifer-Vishny 1997)",
+      "noise trader risk (De Long-Shleifer-Summers-Waldmann 1990)",
+      "heterogeneous-beliefs bubbles (Scheinkman-Xiong 2003)",
+      "short-sales constraints and the resale option",
+      "overconfidence and trading volume (Odean 1998b, 1999; Barber-Odean 2000, 2001)",
+      "gender gap in trading (Barber-Odean 2001)",
+      "speculative bubbles and their empirical signatures",
+    ],
+  },
+  16: {
+    title: "Household Finance",
+    topics: [
+      "stock-market non-participation puzzle (Vissing-Jorgensen 2003)",
+      "under-diversification",
+      "home bias (domestic and own-employer stock)",
+      "disposition effect (Shefrin-Statman 1985; Odean 1998a)",
+      "household liabilities puzzles: credit-card debt with liquid assets",
+      "active fund underperformance (Gruber 1996; French 2008; Fama-French 2010)",
+      "Berk-Green (2004) zero after-fee alpha equilibrium",
+      "Del Guercio-Reuter (2013) broker-channel decomposition",
+    ],
+  },
+  17: {
+    title: "Prospect Theory I",
+    topics: [
+      "Kahneman-Tversky (1979) value function: concave in gains, convex in losses, kink at reference point",
+      "loss aversion coefficient λ ≈ 2.25",
+      "reference dependence",
+      "probability weighting function w(p): over-weighting small probabilities, under-weighting moderate-to-large",
+      "certainty effect and Allais paradox",
+      "fourfold pattern of risk attitudes",
+      "framing effects",
+    ],
+  },
+  18: {
+    title: "Prospect Theory Applications",
+    topics: [
+      "myopic loss aversion and the equity premium puzzle (Benartzi-Thaler 1995)",
+      "endowment effect (Knetsch 1989; Kahneman-Knetsch-Thaler 1990; List 2003)",
+      "disposition effect from prospect theory",
+      "Sydnor (2010) insurance deductible choice",
+      "Barberis-Huang-Santos (2001) asset pricing with loss aversion",
+      "cab-driver labor supply (Camerer et al. 1997)",
+      "Hu-Scott (2007) advisor recommendations",
+    ],
+  },
+  19: {
+    title: "Hyperbolic Discounting & Self-Control",
+    topics: [
+      "exponential baseline $u(c_0)+\\delta u(c_1)+\\delta^2 u(c_2)+\\cdots$",
+      "quasi-hyperbolic $(\\beta,\\delta)$ Laibson (1997) formulation",
+      "preference reversal and time inconsistency",
+      "naïfs vs sophisticates (O'Donoghue-Rabin 1999)",
+      "commitment devices",
+      "Save More Tomorrow (Thaler-Benartzi 2004)",
+      "401(k) default effects (Madrian-Shea 2001)",
+      "credit-card borrowing alongside liquid assets as present-bias symptom",
+    ],
+  },
+};
+
+const state = {
+  apiKey: "",
+  model: "",
+  qtype: "",
+  lectureFilter: "",
+  current: null,
+  nextPromise: null,
+  history: [],
+  correct: 0,
+  total: 0,
+};
+
+// --------------------- API plumbing ---------------------
+
+async function callClaude(systemPrompt, userPrompt, maxTokens = 1500) {
+  const resp = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "x-api-key": state.apiKey,
+      "anthropic-version": "2023-06-01",
+      "content-type": "application/json",
+      "anthropic-dangerous-direct-browser-access": "true",
+    },
+    body: JSON.stringify({
+      model: state.model,
+      max_tokens: maxTokens,
+      system: systemPrompt,
+      messages: [{ role: "user", content: userPrompt }],
+    }),
+  });
+  if (!resp.ok) {
+    const errText = await resp.text();
+    throw new Error(`API error ${resp.status}: ${errText}`);
+  }
+  const data = await resp.json();
+  if (!data.content || !data.content[0] || !data.content[0].text) {
+    throw new Error("Unexpected API response: " + JSON.stringify(data));
+  }
+  return data.content[0].text;
+}
+
+function extractJSON(raw) {
+  let s = raw.trim();
+  // Strip code fences
+  s = s.replace(/^```(?:json)?\s*/i, "").replace(/\s*```\s*$/i, "");
+  // Find first { and last } to be tolerant of stray preamble
+  const first = s.indexOf("{");
+  const last = s.lastIndexOf("}");
+  if (first >= 0 && last > first) s = s.slice(first, last + 1);
+  return JSON.parse(s);
+}
+
+// --------------------- Question generation ---------------------
+
+function pickQType() {
+  if (state.qtype !== "mixed") return state.qtype;
+  const pool = ["mcq", "short", "quant"];
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+function pickLecture() {
+  if (state.lectureFilter !== "any") return parseInt(state.lectureFilter, 10);
+  const keys = Object.keys(TOPICS).map(Number);
+  return keys[Math.floor(Math.random() * keys.length)];
+}
+
+// Style guide derived from the ECON 138 staff Practice Exam II (April 2026).
+// Injected into every question-generation call so outputs match the staff exam's
+// wording, length, citation style, and distractor style.
+const STAFF_STYLE_GUIDE = `
+You must write questions in the exact style of the UC Berkeley ECON 138 staff exams. The template is the Midterm II Practice Exam (Berkeley Econ 138, Apr 1 2026). Follow these staff conventions strictly:
+
+GENERAL STAFF VOICE
+- Terse, declarative, textbook-formal. No casual asides, no second-person "you" except in quantitative setups ("Suppose you live in a town where...").
+- Embed full paper citations inline when a result is attributed: "Jegadeesh and Titman (1993)", "Odean (1998)", "Barber and Odean (2000)", "Miller's (1977) theory", "Chen, Moskowitz, and Shue (2016)", "Hong & Stein (1999)", "Kahneman and Tversky in their 1979 paper".
+- Answers are as brief as possible. "Points will be subtracted for irrelevant material."
+
+MCQ STYLE (Section 1 of the staff exam)
+- Each MCQ uses a named individual in a concrete everyday scenario: Emily, Sarah, John, Mike, Lisa, Tom, Anna, David, Rachel, Ben, etc. Always a first name, never "an investor" or "a subject".
+- Four choices labeled "(a)" "(b)" "(c)" "(d)", each a complete scenario or statement of 1-3 lines. NOT single-word answers.
+- Canonical openers (rotate through these):
+  * "Consider the following scenarios. Which one is most consistent with <theory/finding>?"
+  * "Which of the following scenarios best exemplifies the concept of <concept>?"
+  * "According to the research by <author(s)> (<year>), which of the following statements best describes <agent>'s next decision?"
+  * "Which statement best explains why this mispricing might persist?"
+  * "Which of the following observations most strongly suggests that <alternative explanation> alone cannot fully explain this effect?"
+- Distractors must be plausible common misconceptions or near-misses. Frequently mix up paired concepts (gambler's fallacy vs hot-hand, conservatism vs overreaction, disposition effect vs tax-loss harvesting, representativeness vs availability).
+- When the MCQ involves numbers (e.g., the Palm/3Com stub), set up the full calculation in the stem and ask which statement best EXPLAINS the result — the student does not compute in an MCQ, they interpret.
+- The correct answer's explanation is 1-3 sentences maximum.
+
+SHORT-ANSWER STYLE (Section 2 of the staff exam)
+- Openers (rotate):
+  * "What is the <phenomenon> in stock returns, as documented by <author(s)> (<year>)?"
+  * "How does <mechanism> lead to <outcome>?"
+  * "Explain <author>'s (<year>) theory on <topic>."
+  * "What distinguishes <X> from <Y>?"
+  * "In the study '<title>' by <authors> (<year>), what impact does <treatment> have on <outcome>?"
+  * "Briefly describe the mechanism by which <X> generates <Y>."
+- Model answer: 2-4 sentences, terse, no preamble. Begins directly with the substantive claim ("Jegadeesh and Titman show that..." / "Risk refers to..." / "According to Miller's theory..."). No filler like "This is a great question" or "Let me explain".
+- Each rubric point is ONE concrete verifiable fact. Rubrics have 2-4 points.
+
+QUANTITATIVE STYLE (Section 4 of the staff exam)
+- Set up a concrete everyday scenario with a named individual or town: "Suppose you live in a town where X% are doctors and Y% are teachers. A random individual, Lisa, is selected..." / "Consider an investor, Tom, with prospect-theory preferences..." / "Sarah faces the following (beta, delta) discounting problem..."
+- Use realistic round-ish numbers: percentages as 10%, 20%, 30%, 80%; probabilities 0.1, 0.2, 0.5; beta = 0.6 or 0.7; delta = 0.95 or 0.99; lambda = 2.25; reference point = 0; etc.
+- The question should require a Bayesian update, a (β,δ) preference-reversal calculation, a prospect-theory gamble valuation with given lambda and weighting, an expected-return / Sharpe calculation, a PGR vs PLR decomposition, or similar.
+- Show every Bayes / algebra step in the model_solution, using LaTeX. Include the intermediate fractions, not just the final number. Follow the Bayes layout pattern from the staff exam:
+  $P(A \\mid B) = \\frac{P(B \\mid A) \\cdot P(A)}{P(B \\mid A) \\cdot P(A) + P(B \\mid \\neg A) \\cdot P(\\neg A)} = \\frac{(0.80)(0.10)}{(0.80)(0.10) + (0.20)(0.90)} = \\frac{0.08}{0.26} \\approx 30.77\\%$.
+- Where appropriate, the stem asks the student to both (i) compute the number and (ii) interpret whether the result indicates a specific bias. Include both requirements in the stem.
+
+FORMATTING
+- Use $...$ and $$...$$ LaTeX for all math. Never use Unicode math symbols.
+- Never mention slides, lecture numbers, or "as we saw in class". The question must stand alone.
+- Never use markdown headers inside a question stem.
+`;
+
+function questionSystemPrompt() {
+  return `You are a teaching assistant for UC Berkeley's ECON 138 Behavioral Finance course (Prof. Ulrike Malmendier), writing new practice questions in the exact style of the staff's Practice Exam II (April 2026) for Midterm II material (Lectures 11-19). Your questions must be ORIGINAL — do not duplicate questions from the staff practice exam verbatim — but must match the staff exam's format, wording, citation style, length, and distractor design as closely as possible. Respond with ONLY a single valid JSON object. No markdown fences, no prose outside the JSON.
+
+${STAFF_STYLE_GUIDE}`;
+}
+
+function questionUserPrompt(qtype, lecture) {
+  const info = TOPICS[lecture];
+  const topicList = info.topics.map((t) => "  - " + t).join("\n");
+  const avoid =
+    state.history.length > 0
+      ? `\n\nRecent questions you have just asked. Do NOT repeat or paraphrase any of these — pick a different topic area or a different angle:\n${state.history
+          .map((h, i) => `  ${i + 1}. ${h}`)
+          .join("\n")}`
+      : "";
+
+  const formatSpec =
+    qtype === "mcq"
+      ? `Format: multiple-choice conceptual question.
+Return JSON with exactly these fields:
+{
+  "type": "mcq",
+  "lecture": ${lecture},
+  "topic": "<the specific topic area from the list above>",
+  "question": "<question stem, 1-4 sentences, may include LaTeX>",
+  "choices": ["(a) <option>", "(b) <option>", "(c) <option>", "(d) <option>"],
+  "correct": "<one of a|b|c|d>",
+  "explanation": "<2-4 sentences explaining why the correct answer is right and why the strongest distractor is wrong>"
+}
+Guidelines:
+- Exactly four choices, exactly one correct.
+- Distractors must be plausible common misconceptions or near-misses, not obviously wrong.
+- Prefer questions that test understanding of a mechanism or distinction over pure recall.`
+      : qtype === "short"
+      ? `Format: short-answer conceptual question.
+Return JSON with exactly these fields:
+{
+  "type": "short",
+  "lecture": ${lecture},
+  "topic": "<the specific topic area from the list above>",
+  "question": "<question stem requiring a 2-4 sentence answer>",
+  "model_answer": "<a 2-4 sentence model answer>",
+  "rubric": ["<key point 1>", "<key point 2>", "<key point 3 if relevant>"]
+}
+Guidelines:
+- The question should require the student to explain a mechanism, define a concept, or contrast two ideas.
+- Rubric points are the distinct facts or reasoning steps the grader should look for.`
+      : `Format: quantitative problem (calculation).
+Return JSON with exactly these fields:
+{
+  "type": "quant",
+  "lecture": ${lecture},
+  "topic": "<the specific topic area from the list above>",
+  "question": "<question stem with ALL numeric inputs, use LaTeX for math>",
+  "numeric_answer": <final numeric answer as a plain number, or null if not single-number>,
+  "answer_tolerance": <acceptable fractional tolerance, e.g. 0.02 for 2%>,
+  "final_answer_text": "<short string showing the final answer, e.g. '0.375' or '\\\\$12{,}500'>",
+  "model_solution": "<full step-by-step solution in markdown with LaTeX, 4-10 lines>"
+}
+Guidelines:
+- Use realistic numbers. Examples of good quantitative topics: Bayesian posterior updates, (beta,delta) discounting preference reversal, prospect-theory gamble valuation with given lambda and weighting, expected returns under extrapolation, portfolio share under CRRA, Sharpe ratio of a momentum strategy with given stats, disposition-effect PGR/PLR calculation.
+- If the answer is not a single number (e.g., "both A and B"), set numeric_answer to null and rely on model_solution + final_answer_text.
+- Show every step in model_solution.`;
+
+  return `Generate ONE ${qtype.toUpperCase()} question drawn from Lecture ${lecture} — ${info.title}.
+
+Topic areas you may draw from (pick ONE and drill into it):
+${topicList}
+
+${formatSpec}${avoid}`;
+}
+
+async function generateQuestion() {
+  const qtype = pickQType();
+  const lecture = pickLecture();
+  const raw = await callClaude(questionSystemPrompt(), questionUserPrompt(qtype, lecture), 1800);
+  const q = extractJSON(raw);
+  // Sanity defaults
+  if (!q.type) q.type = qtype;
+  if (!q.lecture) q.lecture = lecture;
+  return q;
+}
+
+// --------------------- Grading ---------------------
+
+async function gradeAnswer(q, userAnswer) {
+  // MCQ: direct check
+  if (q.type === "mcq") {
+    const correct = userAnswer.toLowerCase() === String(q.correct).toLowerCase();
+    return {
+      correct,
+      score: correct ? 1 : 0,
+      feedback: q.explanation || (correct ? "Correct." : "Incorrect."),
+    };
+  }
+
+  // Quant with numeric answer: check tolerance first for an auto-correct
+  if (q.type === "quant" && q.numeric_answer !== null && q.numeric_answer !== undefined) {
+    const parsed = parseFloat(String(userAnswer).replace(/[,$%\s]/g, ""));
+    if (!isNaN(parsed)) {
+      const target = parseFloat(q.numeric_answer);
+      const tol = q.answer_tolerance || 0.02;
+      const absErr = Math.abs(parsed - target);
+      const relErr = Math.abs(target) > 1e-12 ? absErr / Math.abs(target) : absErr;
+      if (relErr <= tol || absErr <= tol) {
+        return {
+          correct: true,
+          score: 1,
+          feedback: `Within tolerance (${(relErr * 100).toFixed(2)}% off).`,
+          auto: true,
+        };
+      }
+      // else fall through to model grading for partial credit on method
+    }
+  }
+
+  // Short answer or quant needing rubric grading: ask Claude
+  const gradingSystem = `You are a strict but fair grader for UC Berkeley ECON 138 Behavioral Finance exam answers. You grade on substance, not wording. Accept paraphrases and equivalent expressions. Deduct for missing key points, incorrect reasoning, or mechanism confusion. Respond with ONLY a single valid JSON object.`;
+
+  const rubricText = q.rubric && q.rubric.length ? "Rubric key points:\n" + q.rubric.map((r) => "  - " + r).join("\n") : "";
+  const modelRef = q.model_answer || q.model_solution || "(no model answer provided)";
+
+  const gradingUser = `Grade this student answer.
+
+=== Question ===
+${q.question}
+
+=== Model answer / reference solution ===
+${modelRef}
+
+${rubricText}
+
+=== Student answer ===
+${userAnswer}
+
+Grade the student answer for correctness and completeness. Return JSON:
+{
+  "score": <number between 0.0 and 1.0>,
+  "correct": <true if score >= 0.75, else false>,
+  "feedback": "<2-4 sentences: what the student got right, what they missed, and the key correct reasoning they should internalize>"
+}`;
+
+  const raw = await callClaude(gradingSystem, gradingUser, 800);
+  return extractJSON(raw);
+}
+
+// --------------------- Rendering ---------------------
+
+function el(tag, attrs = {}, ...children) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "class") e.className = v;
+    else if (k === "style") e.setAttribute("style", v);
+    else if (k.startsWith("on")) e[k] = v;
+    else e.setAttribute(k, v);
+  }
+  for (const c of children) {
+    if (c == null) continue;
+    if (typeof c === "string") e.appendChild(document.createTextNode(c));
+    else e.appendChild(c);
+  }
+  return e;
+}
+
+function renderMath(node) {
+  if (window.renderMathInElement) {
+    try {
+      renderMathInElement(node, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false },
+          { left: "\\[", right: "\\]", display: true },
+        ],
+        throwOnError: false,
+      });
+    } catch (e) {
+      console.warn("KaTeX render failed", e);
+    }
+  }
+}
+
+function renderQuestion(q) {
+  const qb = document.getElementById("questionBox");
+  qb.innerHTML = "";
+
+  const lectureTitle = TOPICS[q.lecture] ? TOPICS[q.lecture].title : "";
+  document.getElementById("meta").textContent =
+    `Lecture ${q.lecture} — ${lectureTitle} · ${q.topic || ""} · ${q.type.toUpperCase()}`;
+
+  const qp = el("div", { class: "question-text" });
+  qp.textContent = q.question;
+  qb.appendChild(qp);
+
+  if (q.type === "mcq") {
+    const list = el("div", { class: "choices" });
+    (q.choices || []).forEach((c, i) => {
+      const letter = "abcd"[i];
+      const lbl = el("label", { class: "choice" });
+      const radio = el("input", { type: "radio", name: "answer", value: letter });
+      const span = el("span");
+      span.textContent = c;
+      lbl.appendChild(radio);
+      lbl.appendChild(span);
+      list.appendChild(lbl);
+    });
+    qb.appendChild(list);
+  } else {
+    const ta = el("textarea", {
+      id: "answerInput",
+      rows: q.type === "quant" ? 4 : 6,
+      placeholder:
+        q.type === "quant"
+          ? "Numeric answer (or brief work). Tip: press Ctrl+Enter to submit."
+          : "Your answer (2-4 sentences). Tip: press Ctrl+Enter to submit.",
+    });
+    ta.addEventListener("keydown", (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
+        e.preventDefault();
+        onSubmit();
+      }
+    });
+    qb.appendChild(ta);
+    setTimeout(() => ta.focus(), 50);
+  }
+
+  document.getElementById("gradeBox").innerHTML = "";
+  document.getElementById("submitBtn").style.display = "";
+  document.getElementById("submitBtn").disabled = false;
+  document.getElementById("nextBtn").style.display = "none";
+
+  renderMath(qb);
+}
+
+async function showNext() {
+  const qb = document.getElementById("questionBox");
+  qb.innerHTML = "<div class='spinner'>Generating question…</div>";
+  document.getElementById("meta").textContent = "…";
+  document.getElementById("gradeBox").innerHTML = "";
+  document.getElementById("submitBtn").style.display = "none";
+  document.getElementById("nextBtn").style.display = "none";
+
+  let q;
+  try {
+    if (state.nextPromise) {
+      q = await state.nextPromise;
+      state.nextPromise = null;
+    }
+    if (!q) q = await generateQuestion();
+  } catch (e) {
+    qb.innerHTML = "";
+    qb.appendChild(el("div", { class: "err" }, "Question generation failed: " + e.message));
+    const retry = el("button", { onclick: showNext }, "Retry");
+    qb.appendChild(retry);
+    return;
+  }
+
+  state.current = q;
+  const stem = (q.question || "").replace(/\s+/g, " ").slice(0, 140);
+  state.history.push(`[L${q.lecture} ${q.type}] ${stem}`);
+  if (state.history.length > 10) state.history.shift();
+
+  renderQuestion(q);
+
+  // Prefetch the next question in the background
+  state.nextPromise = generateQuestion().catch((e) => {
+    console.warn("Prefetch failed", e);
+    return null;
+  });
+}
+
+async function onSubmit() {
+  const q = state.current;
+  if (!q) return;
+
+  let userAnswer;
+  if (q.type === "mcq") {
+    const sel = document.querySelector('input[name="answer"]:checked');
+    if (!sel) {
+      alert("Pick an answer first.");
+      return;
+    }
+    userAnswer = sel.value;
+  } else {
+    const ta = document.getElementById("answerInput");
+    userAnswer = ta.value.trim();
+    if (!userAnswer) {
+      alert("Type an answer first.");
+      return;
+    }
+    ta.disabled = true;
+  }
+
+  const submitBtn = document.getElementById("submitBtn");
+  submitBtn.disabled = true;
+  const gb = document.getElementById("gradeBox");
+  gb.innerHTML = "<div class='spinner'>Grading…</div>";
+
+  let grade;
+  try {
+    grade = await gradeAnswer(q, userAnswer);
+  } catch (e) {
+    gb.innerHTML = "";
+    gb.appendChild(el("div", { class: "err" }, "Grading failed: " + e.message));
+    submitBtn.disabled = false;
+    return;
+  }
+
+  state.total += 1;
+  if (grade.correct) state.correct += 1;
+  document.getElementById("score").textContent = `${state.correct} / ${state.total}`;
+
+  gb.innerHTML = "";
+  const verdict = el("div", { class: "verdict " + (grade.correct ? "ok" : "bad") });
+  verdict.textContent = grade.correct ? "✓ Correct" : "✗ Incorrect";
+  if (typeof grade.score === "number" && !grade.correct && grade.score > 0) {
+    verdict.textContent += ` (${Math.round(grade.score * 100)}% credit)`;
+  }
+  gb.appendChild(verdict);
+
+  // Show the canonical correct answer
+  if (q.type === "mcq") {
+    const cor = el("div", { class: "correct-line" });
+    cor.innerHTML = "<b>Correct answer:</b> ";
+    const idx = "abcd".indexOf(String(q.correct).toLowerCase());
+    cor.appendChild(document.createTextNode(idx >= 0 && q.choices ? q.choices[idx] : q.correct));
+    gb.appendChild(cor);
+  } else if (q.type === "quant" && q.final_answer_text) {
+    const cor = el("div", { class: "correct-line" });
+    cor.innerHTML = "<b>Correct answer:</b> ";
+    const span = el("span");
+    span.textContent = q.final_answer_text;
+    cor.appendChild(span);
+    gb.appendChild(cor);
+  }
+
+  const fb = el("div", { class: "feedback" });
+  fb.textContent = grade.feedback || "";
+  gb.appendChild(fb);
+
+  const modelAnswer = q.model_solution || q.model_answer;
+  if (modelAnswer) {
+    const details = el("details");
+    const summary = el("summary");
+    summary.textContent = q.type === "quant" ? "Show full solution" : "Show model answer";
+    const body = el("div", { class: "model-answer" });
+    body.textContent = modelAnswer;
+    details.appendChild(summary);
+    details.appendChild(body);
+    gb.appendChild(details);
+  }
+
+  document.getElementById("submitBtn").style.display = "none";
+  document.getElementById("nextBtn").style.display = "";
+  document.getElementById("nextBtn").focus();
+
+  renderMath(gb);
+}
+
+// --------------------- Wiring ---------------------
+
+document.getElementById("startBtn").addEventListener("click", async () => {
+  const key = document.getElementById("apiKey").value.trim();
+  const errBox = document.getElementById("setupErr");
+  errBox.style.display = "none";
+  if (!key) {
+    errBox.textContent = "Please paste your Anthropic API key.";
+    errBox.style.display = "";
+    return;
+  }
+  state.apiKey = key;
+  state.model = document.getElementById("model").value;
+  state.qtype = document.getElementById("qtype").value;
+  state.lectureFilter = document.getElementById("lecture").value;
+
+  document.getElementById("setup").style.display = "none";
+  document.getElementById("quiz").style.display = "";
+  await showNext();
+});
+
+document.getElementById("submitBtn").addEventListener("click", onSubmit);
+document.getElementById("nextBtn").addEventListener("click", showNext);
+document.getElementById("quitBtn").addEventListener("click", () => {
+  if (state.total === 0 || confirm("End this session? Your score will be lost.")) {
+    document.getElementById("quiz").style.display = "none";
+    document.getElementById("setup").style.display = "";
+    state.current = null;
+    state.nextPromise = null;
+    state.history = [];
+    state.correct = 0;
+    state.total = 0;
+    document.getElementById("score").textContent = "0 / 0";
+  }
+});
+</script>
+</body>
+</html>

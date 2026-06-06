@@ -17,3 +17,8 @@ LCCE
 LCCDE
 fixed
 expense
+year
+the
+Egc
+EGCD
+gradient
