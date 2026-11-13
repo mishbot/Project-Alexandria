@@ -81,6 +81,10 @@ _sources/
 # ============================================================
 _scratch/
 
+# Generated study packets, videos, and homework write-ups. Large media and
+# course-specific material that does not belong in the public repo.
+Claude outputs/
+
 # ============================================================
 # macOS
 # ============================================================
