@@ -3011,7 +3011,7 @@ Excellent! Now I have a good sense of all the files. Let me compile the comprehe
 - **Missing:** Derivation section is incomplete (cuts off mid-sentence at "Intuition"); Examples section is absent; at least one worked example with grounded data
 - **Issues:** Opening callout is good (dense, formal), but Intuition is cut off and never completes
 - **TikZ opportunity:** Diagram of fitted line vs. data points (scatter plot with regression line) in the Intuition section to show the least-squares geometric interpretation
-- **Suggestions:** (1) Complete the Intuition section—explain why squared error is minimized geometrically. (2) Add at least one worked example: fit a line to height-weight data or similar. (3) Add cross-link to [[1.2a Least Squares]] already referenced. (4) Link to regularization concepts from Deep Learning section.
+- **Suggestions:** (1) Complete the Intuition section—explain why squared error is minimized geometrically. (2) Add at least one worked example: fit a line to height-weight data or similar. (3) Add cross-link to [[6.1. Least Squares]] already referenced. (4) Link to regularization concepts from Deep Learning section.
 
 #### `Computer Science/4. Machine Learning/1. Regression Models/1.3. RANSAC.md`
 - **Status:** empty stub
@@ -4654,7 +4654,7 @@ Based on my comprehensive review of the Statistics and Economics folders, let me
 - **Missing:** Examples (worked calculations), Intuition section, cross-links
 - **Issues:** Callout is dense and comprehensive but lacks intuitive framing. "Measurements of Yield" section lists formulas without explanation. No worked examples showing bond pricing/yield calculations.
 - **TikZ opportunity:** Bond price-yield curve showing par/discount/premium regions; illustration of dirty vs. clean price with timeline
-- **Suggestions:** (1) Add Intuition: explain the inverse relationship between bond price and yield (when yields rise, existing bonds must cheapen to compete). Explain the three regions (par/discount/premium). (2) Add Properties section formalizing Duration, Convexity, and bond immunization. (3) Add Examples: given coupon rate, face value, market yield, calculate bond price; compare YTM calculations. (4) Create a TikZ showing bond cash flows on a timeline, price-yield relationship. (5) Link to [[1. Time Value of Money|Time Value of Money]], [[2.1a.2 Yield Curves|Yield Curves]], [[2.1a.4 Measuring Bond Risk|Bond Risk]].
+- **Suggestions:** (1) Add Intuition: explain the inverse relationship between bond price and yield (when yields rise, existing bonds must cheapen to compete). Explain the three regions (par/discount/premium). (2) Add Properties section formalizing Duration, Convexity, and bond immunization. (3) Add Examples: given coupon rate, face value, market yield, calculate bond price; compare YTM calculations. (4) Create a TikZ showing bond cash flows on a timeline, price-yield relationship. (5) Link to [[1. Time Value of Money|Time Value of Money]], [[2.1.1f Yield Curves|Yield Curves]], [[2.1.1i Measuring Bond Risk|Bond Risk]].
 
 #### `Economics/1. Finance/4. Portfolio Management/4.3 Risk Management/4.3c Capital Asset Pricing Model.md`
 - **Status:** draft
