@@ -7,7 +7,7 @@ This vault is being prepared as an **open-source knowledge base**. That shapes e
 ## 2.1 Macrocosm
 - Primary (subject) folders are structured generally. They are sorted in order of creation.
 - Secondary (field) folders are structured based on my interests, with a weight on importance.
-- Every folder represents a single coherent topic. A subfolder with fewer than three notes and no meaningful sub-hierarchy gets flattened into its parent.
+- Every folder represents a single coherent topic. A subfolder needs at least two notes besides its index note. A smaller subfolder with no meaningful sub-hierarchy gets flattened into its parent.
 - Folder nesting does not exceed five levels below a primary folder. Deeper structure is a sign the hierarchy needs rethinking, not extending.
 - Each folder contains an *index note* sharing the folder's name (e.g., `5. Linear Algebra.md` inside `5. Linear Algebra/`). Index notes are not placeholders — see §4.3.
 
@@ -174,7 +174,7 @@ Tags are structured, not freeform. Every tag belongs to one of a fixed set of na
 
 **`domain/` — What field is this?**
 One per note. Values: `math`, `cs`, `stats`, `econ`, `ee`, `physics`. Subdomains are encoded as nested paths:
-`math/probability`, `math/linear-algebra`, `math/game-theory`, `cs/machine-learning`, `cs/deep-learning`, `cs/computer-vision`, `cs/nlp`, `cs/robotics`, `cs/architecture`, `cs/algorithms`, `ee/circuits`, `ee/signals`, `physics/mechanics`, `stats/inference`, `stats/time-series`, `stats/bayesian`, `econ/finance`, `econ/money`, `econ/markets`.
+`math/probability`, `math/linear-algebra`, `math/game-theory`, `math/multivariable-calculus`, `math/optimization`, `cs/machine-learning`, `cs/deep-learning`, `cs/computer-vision`, `cs/nlp`, `cs/robotics`, `cs/architecture`, `cs/algorithms`, `ee/circuits`, `ee/signals`, `physics/mechanics`, `physics/thermodynamics`, `physics/electromagnetism`, `stats/inference`, `stats/time-series`, `stats/bayesian`, `econ/finance`, `econ/money`, `econ/markets`, `econ/microeconomics`.
 
 **`type/` — What kind of note is this?**
 One per note. Values: `definition`, `theorem`, `lemma`, `identity`, `algorithm`, `model`, `method`, `framework`, `principle`, `technique`.
